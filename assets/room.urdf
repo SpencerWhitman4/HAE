@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<robot name="room">
+  <link name="ground_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="40 40 0.1"/>
+      </geometry>
+      <material name="grass">
+        <color rgba="0.2 0.8 0.2 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="40 40 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1000"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <link name="wall_left_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="-20 0 1"/>
+      <geometry>
+        <box size="0.5 40 2"/>
+      </geometry>
+      <material name="wall_mat">
+        <color rgba="0.8 0.8 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-20 0 1"/>
+      <geometry>
+        <box size="0.5 40 2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <link name="wall_right_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="20 0 1"/>
+      <geometry>
+        <box size="0.5 40 2"/>
+      </geometry>
+      <material name="wall_mat">
+        <color rgba="0.8 0.8 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="20 0 1"/>
+      <geometry>
+        <box size="0.5 40 2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <link name="wall_front_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 20 1"/>
+      <geometry>
+        <box size="40.5 0.5 2"/>
+      </geometry>
+      <material name="wall_mat">
+        <color rgba="0.8 0.8 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 20 1"/>
+      <geometry>
+        <box size="40.5 0.5 2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  
+  <link name="wall_back_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 -20 1"/>
+      <geometry>
+        <box size="40.5 0.5 2"/>
+      </geometry>
+      <material name="wall_mat">
+        <color rgba="0.8 0.8 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -20 1"/>
+      <geometry>
+        <box size="40.5 0.5 2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <joint name="ground_joint" type="fixed">
+    <parent link="ground_link"/>
+    <child link="wall_left_link"/>
+  </joint>
+  <joint name="wall_right_joint" type="fixed">
+    <parent link="ground_link"/>
+    <child link="wall_right_link"/>
+  </joint>
+  <joint name="wall_front_joint" type="fixed">
+    <parent link="ground_link"/>
+    <child link="wall_front_link"/>
+  </joint>
+  <joint name="wall_back_joint" type="fixed">
+    <parent link="ground_link"/>
+    <child link="wall_back_link"/>
+  </joint>
+
+</robot>

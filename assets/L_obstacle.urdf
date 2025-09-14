@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<robot name="L_obstacle">
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.5"/>
+      <geometry>
+        <box size="4 1 1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.5"/>
+      <geometry>
+        <box size="4 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <link name="short_arm_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="-1.5 1.5 0.5"/>
+      <geometry>
+        <box size="1 2 1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-1.5 1.5 0.5"/>
+      <geometry>
+        <box size="1 2 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <joint name="L_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="short_arm_link"/>
+  </joint>
+</robot>

@@ -1,0 +1,94 @@
+{
+  "underground_cave_basic": {
+    "name": "Underground Cave Basic",
+    "description": "Basic underground cave environment for fundamental flight training",
+    "start_pos": [0, 0, 1.5],
+    "bounds": {
+      "x_min": -6.0, "x_max": 6.0,
+      "y_min": -6.0, "y_max": 6.0, 
+      "z_min": 0.5, "z_max": 4.0
+    },
+    "obstacles": [
+      {"position": [2, 1, 1.5], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.2, "color": "red"},
+      {"position": [-2, -1, 1.5], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.2, "color": "green"}
+    ]
+  },
+  "basic_training": {
+    "name": "Basic Training Map",
+    "description": "Simple obstacle layout suitable for beginner training",
+    "start_pos": [0, 0, 1],
+    "bounds": {
+      "x_min": -8.0, "x_max": 8.0,
+      "y_min": -8.0, "y_max": 8.0, 
+      "z_min": 0.1, "z_max": 5.0
+    },
+    "obstacles": [
+      {"position": [2, 2, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"},
+      {"position": [3, 0, 1], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "green"},
+      {"position": [0, 3, 1], "urdf_path": "orange_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "orange"}
+    ]
+  },
+  "medium_challenge": {
+    "name": "Medium Challenge Map",
+    "description": "Medium difficulty obstacle layout",
+    "start_pos": [0, 0, 1],
+    "bounds": {
+      "x_min": -10.0, "x_max": 10.0,
+      "y_min": -10.0, "y_max": 10.0,
+      "z_min": 0.1, "z_max": 5.0
+    },
+    "obstacles": [
+      {"position": [2, 2, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"},
+      {"position": [-2, -2, 1], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "green"},
+      {"position": [3, 0, 1], "urdf_path": "orange_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "orange"},
+      {"position": [-3, 0, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"},
+      {"position": [0, 3, 1], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "green"},
+      {"position": [0, -3, 1], "urdf_path": "orange_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "orange"}
+    ]
+  },
+  "advanced_maze": {
+    "name": "Advanced Maze Map",
+    "description": "High difficulty complex obstacle layout",
+    "start_pos": [0, 0, 1],
+    "bounds": {
+      "x_min": -12.0, "x_max": 12.0,
+      "y_min": -12.0, "y_max": 12.0,
+      "z_min": 0.1, "z_max": 5.0
+    },
+    "obstacles": [
+      {"position": [2, 2, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"},
+      {"position": [-2, -2, 1], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "green"},
+      {"position": [3, 0, 1], "urdf_path": "orange_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "orange"},
+      {"position": [-3, 0, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"},
+      {"position": [0, 3, 1], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "green"},
+      {"position": [0, -3, 1], "urdf_path": "orange_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "orange"},
+      {"position": [-2, 3, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"},
+      {"position": [-2, -3, 1], "urdf_path": "green_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "green"},
+      {"position": [5, 4, 1], "urdf_path": "orange_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "orange"}
+    ]
+  },
+  "test_simple": {
+    "name": "Simple Test Map",
+    "description": "Simple map for quick testing",
+    "start_pos": [0, 0, 1],
+    "bounds": {
+      "x_min": -5.0, "x_max": 5.0,
+      "y_min": -5.0, "y_max": 5.0,
+      "z_min": 0.1, "z_max": 3.0
+    },
+    "obstacles": [
+      {"position": [1.5, 1.5, 1], "urdf_path": "red_cylinder.urdf", "type": "cylinder", "radius": 0.3, "color": "red"}
+    ]
+  },
+  "empty": {
+    "name": "空地图",
+    "description": "没有障碍物的空地图，用于基础飞行测试",
+    "start_pos": [0, 0, 1],
+    "bounds": {
+      "x_min": -8.0, "x_max": 8.0,
+      "y_min": -8.0, "y_max": 8.0,
+      "z_min": 0.1, "z_max": 4.0
+    },
+    "obstacles": []
+  }
+}
