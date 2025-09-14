@@ -1,4 +1,4 @@
-# HAE Hierarchical Attention-based Explorer System Architecture
+# HAE Hierarchical Attention-based Exploration System
 
 ## System Overview
 
